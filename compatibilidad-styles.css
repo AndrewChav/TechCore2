@@ -1,0 +1,420 @@
+/* ========================================
+   ESTILOS PARA PÁGINAS DE COMPATIBILIDAD
+   AMD, INTEL Y RAM
+   ======================================== */
+
+body {
+    background: rgb(30, 30, 30);
+    color: #e0e6ed;
+}
+
+/* Banner Principal */
+.banner {
+    position: relative;
+    margin-top: 60px;
+    background: linear-gradient(135deg, #0d1b2a 0%, #1a2332 100%);
+    padding: 80px 20px;
+    text-align: center;
+    border-bottom: 2px solid rgba(13, 168, 189, 0.3);
+    overflow: hidden;
+    min-height: 500px;
+}
+
+#particles-js-banner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+}
+
+.banner h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #0da8bd;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    text-shadow: 0 0 20px rgba(13, 168, 189, 0.5);
+}
+
+.banner p {
+    font-size: 1.2rem;
+    color: #b8c5d6;
+    max-width: 900px;
+    margin: 0 auto 30px;
+    line-height: 1.8;
+}
+
+.boton {
+    display: inline-block;
+    padding: 12px 35px;
+    background: #0da8bd;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(13, 168, 189, 0.4);
+}
+
+.boton:hover {
+    background: #0f488a;
+    box-shadow: 0 0 30px rgba(15, 72, 138, 0.6);
+    transform: translateY(-3px);
+}
+
+/* Contenido Principal */
+.compatibilidad,
+main {
+    background: rgb(30, 30, 30);
+    padding: 60px 20px;
+}
+
+.conten,
+.hola {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Títulos */
+h2.title,
+.seccion {
+    color: #0da8bd;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: 700;
+    text-shadow: 0 0 15px rgba(13, 168, 189, 0.4);
+}
+
+h2.serie {
+    margin-bottom: 15px;
+    font-size: 3rem;
+    text-align: center;
+    color: #0da8bd;
+}
+
+/* Fundamentos y Cards */
+.fundamentos,
+.intro {
+    background: linear-gradient(135deg, #1a1f3a 0%, #2d3561 100%);
+    border: 2px solid rgba(13, 168, 189, 0.3);
+    border-left: 5px solid #0da8bd;
+    border-radius: 12px;
+    padding: 35px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.fundamentos h3,
+.intro h3 {
+    color: #0da8bd;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.fundamentos p,
+.intro p {
+    color: #ffffff;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* Grid de cuadros */
+.decuadros {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.cuadros,
+.cuadros1 {
+    background: linear-gradient(135deg, #1a1f3a 0%, #2d3561 100%);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.cuadros:hover,
+.cuadros1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(13, 168, 189, 0.3);
+    border-color: #0da8bd;
+}
+
+.cuadros h3,
+.cuadros h4,
+.cuadros1 h3 {
+    color: #0da8bd;
+    margin-bottom: 15px;
+}
+
+/* Colores para Series AMD */
+.decuadros:nth-child(3) .cuadros1 {
+    border-left: 5px solid #2196F3;
+}
+
+.decuadros:nth-child(4) .cuadros1 {
+    border-left: 5px solid #4CAF50;
+}
+
+.decuadros:nth-child(5) .cuadros1 {
+    border-left: 5px solid #FF5722;
+}
+
+/* Listas */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.compatibilidad ul li,
+.conten ul li,
+.hola ul li,
+.fundamentos ul li,
+.intro ul li,
+.cuadros ul li,
+.cuadros1 ul li {
+    color: #b8c5d6;
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+}
+
+.compatibilidad ul li::before,
+.conten ul li::before,
+.hola ul li::before,
+.fundamentos ul li::before,
+.intro ul li::before,
+.cuadros ul li::before,
+.cuadros1 ul li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: #0da8bd;
+    font-weight: bold;
+}
+
+/* Tablas */
+.tabla1,
+.info,
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    background: #1a1f3a;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tabla1 thead tr,
+.info thead tr,
+table thead tr {
+    background: linear-gradient(135deg, #0da8bd 0%, #0f488a 100%);
+    color: white;
+}
+
+.tabla1 th,
+.info th,
+table th {
+    padding: 15px;
+    text-align: left;
+    font-weight: 700;
+    color: white;
+}
+
+.tabla1 td,
+.info td,
+table td {
+    padding: 12px 15px;
+    color: #b8c5d6;
+    border-bottom: 1px solid rgba(13, 168, 189, 0.1);
+}
+
+.tabla1 tbody tr:hover,
+.info tbody tr:hover,
+table tbody tr:hover {
+    background: rgba(13, 168, 189, 0.1);
+}
+
+/* Alertas */
+.errores1,
+.nota {
+    background: rgba(255, 193, 7, 0.1);
+    border: 2px solid rgba(255, 193, 7, 0.4);
+    border-left: 5px solid #ffc107;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 25px 0;
+}
+
+.errores1 strong,
+.nota strong,
+.Importante strong {
+    color: #ffc107;
+}
+
+.nota p {
+    color: #b8c5d6;
+}
+
+/* Acordeones */
+.todo {
+    margin: 20px 0;
+    border: 1px solid rgba(13, 168, 189, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    background: #1a1f3a;
+}
+
+.todo-header {
+    background: rgba(13, 168, 189, 0.1);
+    padding: 15px 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    border-left: 4px solid #0da8bd;
+    transition: all 0.3s ease;
+}
+
+.todo-header:hover {
+    background: rgba(13, 168, 189, 0.2);
+}
+
+.todo-header h4 {
+    color: #0da8bd;
+    margin: 0;
+}
+
+.todo-icon {
+    color: #0da8bd;
+    transition: transform 0.3s ease;
+}
+
+.todo.active .todo-icon {
+    transform: rotate(180deg);
+}
+
+.todo-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.todo.active .todo-content {
+    max-height: 2000px;
+}
+
+.todo-content-inner {
+    padding: 20px;
+}
+
+/* Cards especiales */
+.section {
+    background: #1a1f3a;
+    border: 1px solid rgba(13, 168, 189, 0.2);
+    border-radius: 12px;
+    padding: 40px;
+    margin-bottom: 40px;
+    transition: all 0.3s ease;
+}
+
+.section:hover {
+    border-color: #0da8bd;
+    box-shadow: 0 0 20px rgba(13, 168, 189, 0.2);
+}
+
+.section h2 {
+    color: #0da8bd;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(13, 168, 189, 0.3);
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.card {
+    background: #1a1f3a;
+    border: 1px solid rgba(13, 168, 189, 0.2);
+    border-radius: 10px;
+    padding: 25px;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #0da8bd;
+    box-shadow: 0 5px 20px rgba(13, 168, 189, 0.3);
+}
+
+.card h4 {
+    color: #0da8bd;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.important-box {
+    background: rgba(13, 168, 189, 0.1);
+    border-left: 4px solid #0da8bd;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+.important-box strong {
+    color: #0da8bd;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .banner h1 {
+        font-size: 2rem;
+        margin-top: 30px;
+    }
+
+    .banner p {
+        font-size: 1rem;
+    }
+
+    .decuadros,
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+
+    h2.title,
+    .seccion {
+        font-size: 2rem;
+    }
+
+    h2.serie {
+        font-size: 2.2rem;
+    }
+
+    .fundamentos,
+    .intro,
+    .cuadros,
+    .cuadros1 {
+        padding: 20px;
+    }
+}

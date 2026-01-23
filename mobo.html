@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>TECH CORE | MOBO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --cyan: #00f2ff; --blue: #0066ff; --dark: #010206; }
+        body { background: var(--dark); color: #ccc; font-family: 'Rajdhani', sans-serif; margin: 0; padding: 40px; }
+        .container { max-width: 1100px; margin: auto; border: 1px solid var(--cyan); background: rgba(0,10,20,0.95); padding: 50px; box-shadow: 0 0 50px rgba(0,242,255,0.1); }
+        h1 { font-family: 'Orbitron'; color: white; border-bottom: 2px solid var(--cyan); padding-bottom: 10px; font-size: 2.5rem; text-shadow: 0 0 15px var(--cyan); }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 30px; }
+        img { width: 100%; height: 500px; object-fit: cover; border: 1px solid var(--blue); box-shadow: 0 0 20px rgba(0,102,255,0.3); }
+        .info-box { background: rgba(0,102,255,0.05); padding: 25px; border-left: 4px solid var(--cyan); margin-bottom: 20px; }
+        h3 { color: var(--cyan); font-family: 'Orbitron'; font-size: 1.1rem; margin-top: 0; }
+        .btn-back { display: inline-block; margin-bottom: 20px; color: var(--cyan); text-decoration: none; font-family: 'Orbitron'; border: 1px solid var(--cyan); padding: 10px 20px; transition: 0.3s; font-size: 0.8rem; letter-spacing: 2px; }
+        .btn-back:hover { background: var(--cyan); color: black; box-shadow: 0 0 15px var(--cyan); }
+        ul { color: var(--cyan); font-weight: bold; list-style: square; line-height: 1.8; }
+        p { text-align: justify; line-height: 1.6; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="componentes.html" class="btn-back">« VOLVER AL SISTEMA</a>
+        <h1>PLACA MADRE (MOTHERBOARD)</h1>
+        <div class="grid">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1000">
+            <div>
+                <div class="info-box">
+                    <h3>EL SISTEMA NERVIOSO</h3>
+                    <p>La placa madre es la base donde se conectan todos los componentes. Es como el esqueleto y el sistema nervioso del PC: transporta los datos entre el CPU, la RAM y la tarjeta gráfica.<br><br>
+                    Su función crítica (y poco conocida) es la <strong>Regulación de Voltaje (VRM)</strong>: convierte la energía bruta de la fuente en energía limpia y exacta para el delicado procesador.</p>
+                </div>
+                <div class="info-box">
+                    <h3>DATOS TÉCNICOS</h3>
+                    <ul>
+                        <li><strong>VRM:</strong> 24+2 Fases (Garantiza energía estable incluso en overclocking).</li>
+                        <li><strong>PCB:</strong> 12 capas de grado servidor (Evita interferencias eléctricas).</li>
+                        <li><strong>Conectividad:</strong> WiFi 7 y Ethernet 10Gb (Internet ultra rápido).</li>
+                        <li><strong>Expansión:</strong> 5 ranuras M.2 para discos SSD.</li>
+                        <li><strong>Chipset:</strong> Z890 (El controlador de tráfico de datos).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

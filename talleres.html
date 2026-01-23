@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talleres Educativos - TechCore</title>
+    <link rel="stylesheet" href="talleres.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Barra de navegación -->
+    <header>
+        <div class="contenedor">
+            <p class="logo">Tech<span>Core</span></p>
+
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+
+                    <li class="has-submenu">
+                        <a href="componentes.html ">Componentes</a>
+                        <ul>
+                            <li><a href="procesador.html">Procesador</a></li>
+                            <li><a href="ram.html">Memoria RAM</a></li>
+                            <li><a href="case.html">Case</a></li>
+                            <li><a href="refrigeracion.html">Refrigeración</a></li>
+                            <li><a href="mobo.html">Motherboard</a></li>
+                            <li><a href="gpu.html">Tarjeta Gráfica</a></li>
+                            <li><a href="ssd.html">Almacenamiento</a></li>
+                            <li><a href="psu.html">Fuente de Poder</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="compatibilidad.html">Compatibilidad</a></li>
+                    <li><a href="galeria.html">Galería</a></li>
+                    <li><a href="talleres.html">Talleres</a></li>
+
+                    <li class="has-submenu">
+                        <a href="recursos.html">Recursos</a>
+                        <ul>
+                            <li><a href="#">Infografía</a></li>
+                            <li><a href="#">Videos</a></li>
+                            <li><a href="#">Otros</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Hero Section - Banner Principal -->
+    <section id="hero">
+        <h1>Talleres Educativos</h1>
+        <p class="subtitulo">Actividades interactivas para reforzar tu aprendizaje sobre hardware PC</p>
+        <form action="#juegos">
+            <button class="learn-more">
+                <span class="circle" aria-hidden="true">
+                    <span class="icon arrow"></span>
+                </span>
+                <span class="button-text">Comenzar</span>
+            </button>
+        </form>
+    </section>
+
+    <!-- Sección de Juegos Educativos -->
+    <section id="juegos">
+        <div class="container">
+            <h2>Actividades <span>Interactivas</span></h2>
+
+            <p class="descripcion-juegos">
+                Aprende jugando con actividades interactivas diseñadas para hacer el aprendizaje
+                del hardware más divertido y efectivo. Cada actividad te ayudará a consolidar
+                los conocimientos sobre componentes y compatibilidad de PC.
+            </p>
+
+            <!-- Contenedor de juegos -->
+            <div class="games-grid">
+                <!-- Juego 1: Componentes internos del PC -->
+                <div class="game-card">
+                    <div class="game-header">
+                        <i class="fas fa-puzzle-piece"></i>
+                        <h3>Componentes Internos</h3>
+                    </div>
+                    <div class="game-iframe">
+                        <iframe allow="fullscreen; autoplay; allow-top-navigation-by-user-activation" allowfullscreen
+                            frameborder="0"
+                            src="https://es.educaplay.com/juego/27341346-componentes_internos_del_pc.html">
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Juego 2: Empareja componentes -->
+                <div class="game-card">
+                    <div class="game-header">
+                        <i class="fas fa-link"></i>
+                        <h3>Empareja Componentes</h3>
+                    </div>
+                    <div class="game-iframe">
+                        <iframe allow="fullscreen; autoplay; allow-top-navigation-by-user-activation" allowfullscreen
+                            frameborder="0"
+                            src="https://es.educaplay.com/juego/27341429-empareja_componentes_internos_de_la_pc.html">
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Juego 3: Quiz componentes básicos -->
+                <div class="game-card">
+                    <div class="game-header">
+                        <i class="fas fa-question-circle"></i>
+                        <h3>Quiz de Componentes</h3>
+                    </div>
+                    <div class="game-iframe">
+                        <iframe allow="fullscreen; autoplay; allow-top-navigation-by-user-activation" allowfullscreen
+                            frameborder="0"
+                            src="https://es.educaplay.com/juego/27341487-componentes_basicos_de_una_pc.html">
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Juego 4: Sopa de letras -->
+                <div class="game-card">
+                    <div class="game-header">
+                        <i class="fas fa-search"></i>
+                        <h3>Sopa de Componentes</h3>
+                    </div>
+                    <div class="game-iframe">
+                        <iframe allow="fullscreen; autoplay; allow-top-navigation-by-user-activation" allowfullscreen
+                            frameborder="0"
+                            src="https://es.educaplay.com/juego/27341526-sopa_de_componentes_de_la_pc.html">
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Juego 5: Ensamblaje -->
+                <div class="game-card">
+                    <div class="game-header">
+                        <i class="fas fa-tools"></i>
+                        <h3>Ensamblaje de PC</h3>
+                    </div>
+                    <div class="game-iframe">
+                        <iframe allow="fullscreen; autoplay; allow-top-navigation-by-user-activation" allowfullscreen
+                            frameborder="0"
+                            src="https://es.educaplay.com/juego/27372329-ensamblaje_de_computadoras.html">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Tech<span>Core</span></h3>
+                    <p>Aprende sobre los componentes de la PC y comprende cómo funciona el hardware desde su base.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="#">Componentes</a></li>
+                        <li><a href="compatibilidad.html">Compatibilidad</a></li>
+                        <li><a href="#">Talleres</a></li>
+                        <li><a href="#">Galería</a></li>
+                        <li><a href="#">Recursos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="compatibilidad-principal.html">Guía de Procesadores</a></li>
+                        <li><a href="compatibilidad-principal.html">Verificar Compatibilidad</a></li>
+                        <li><a href="talleres.html">Actividades Interactivas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p style="color: #ddd; line-height: 1.8;">
+                        <i class="fas fa-user-graduate" style="color: #0f488a; margin-right: 0.5rem;"></i>Estudiantes de
+                        Bachillerato<br>
+                        <i class="fas fa-map-marker-alt" style="color: #0f488a; margin-right: 0.5rem;"></i> Guayaquil,
+                        Ecuador
+                    </p>
+                    <p style="color: #0f488a; margin-top: 1rem; font-weight: bold;">
+                        <i class="fas fa-graduation-cap"></i> Proyecto Educativo
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TechCore - Proyecto Educativo de Informática | Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="talleres.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componentes - TechCore</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@500&family=Archivo+Black&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+        /* Reset y configuración base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: monospace;
+            background-color: rgb(30, 30, 30);
+            color: white;
+            padding-top: 60px;
+        }
+
+        /* ========================================
+           HEADER Y NAVEGACIÓN - COPIADO DEL INDEX
+           ======================================== */
+
+        header {
+            background-color: rgb(245, 245, 245);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header .contenedor {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 20px;
+            max-width: 1400px;
+            margin: auto;
+        }
+
+        .logo {
+            font-family: "Archivo Black", sans-serif;
+            margin: 0;
+            font-weight: bold;
+            color: #0da8bd;
+            font-size: 2em;
+        }
+
+        .logo span {
+            color: #c72d2d;
+        }
+
+        /* Botón hamburguesa */
+        .menu-toggle {
+            display: block;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+            z-index: 1001;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 30px;
+            height: 3px;
+            background-color: #0f488a;
+            margin: 6px 0;
+            transition: 0.3s;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-6px, 6px);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-6px, -6px);
+        }
+
+        /* Navegación mobile */
+        nav {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            max-width: 400px;
+            height: 100vh;
+            background-color: rgb(245, 245, 245);
+            transition: right 0.3s ease;
+            overflow-y: auto;
+            padding-top: 70px;
+            box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav.active {
+            right: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            color: black;
+            font-size: 1.3em;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #0f488a;
+            color: white;
+        }
+
+        /* Submenús */
+        nav ul ul {
+            display: none;
+            background-color: rgba(5, 63, 60, 0.05);
+        }
+
+        nav ul ul li a {
+            padding-left: 50px;
+            font-size: 1.1em;
+        }
+
+        nav ul ul ul li a {
+            padding-left: 70px;
+            font-size: 1em;
+        }
+
+        /* Mostrar submenú cuando está activo */
+        nav ul li.active>ul {
+            display: block;
+        }
+
+        /* Indicador de submenú */
+        nav ul li.has-submenu>a::after {
+            content: '▼';
+            position: absolute;
+            right: 30px;
+            font-size: 0.8em;
+            transition: transform 0.3s;
+        }
+
+        nav ul li.has-submenu.active>a::after {
+            transform: rotate(180deg);
+        }
+
+        /* Overlay para cerrar menú */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+
+        /* ========================================
+           HERO SECTION
+           ======================================== */
+
+        #hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            min-height: 60vh;
+            color: white;
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("componentes.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            padding: 80px 20px 40px;
+        }
+
+        #hero h1 {
+            color: white;
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+        }
+
+        /* Botón Learn More */
+        button.learn-more {
+            width: 13rem;
+            height: auto;
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            outline: none;
+            border: 0;
+            vertical-align: middle;
+            text-decoration: none;
+            background: transparent;
+            padding: 0;
+            font-size: inherit;
+            font-family: inherit;
+            margin-bottom: 40px;
+            margin-top: 0;
+        }
+
+        button.learn-more .circle {
+            transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+            position: relative;
+            display: block;
+            margin: 0;
+            width: 3rem;
+            height: 3rem;
+            background: #0f488a;
+            border-radius: 1.625rem;
+        }
+
+        button.learn-more .circle .icon {
+            transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            background: #fff;
+        }
+
+        button.learn-more .circle .icon.arrow {
+            transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+            left: 0.625rem;
+            width: 1.125rem;
+            height: 0.125rem;
+            background: none;
+        }
+
+        button.learn-more .circle .icon.arrow::before {
+            position: absolute;
+            content: "";
+            top: -0.29rem;
+            right: 0.0625rem;
+            width: 0.625rem;
+            height: 0.625rem;
+            border-top: 0.125rem solid #fff;
+            border-right: 0.125rem solid #fff;
+            transform: rotate(45deg);
+        }
+
+        button.learn-more .button-text {
+            transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 0.5rem 0;
+            margin: 0 0 0 1.85rem;
+            color: #ffffff;
+            font-weight: bold;
+            line-height: 1.7;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 1.3rem;
+        }
+
+        button:hover .circle {
+            width: 100%;
+        }
+
+        button:hover .circle .icon.arrow {
+            background: #fff;
+            transform: translate(1rem, 0);
+        }
+
+        button:hover .button-text {
+            color: #fff;
+        }
+
+        /* ========================================
+           GRID DE COMPONENTES
+           ======================================== */
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 60px 50px 80px 50px;
+            max-width: 1400px;
+            margin: auto;
+        }
+
+        .card {
+            border: 1px solid rgba(140, 203, 241, 0.2);
+            background: rgba(15, 72, 138, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: 0.3s;
+            border-radius: 10px;
+        }
+
+        .card:hover {
+            border-color: #8ccbf1;
+            box-shadow: 0 0 20px #8ccbf1;
+            transform: translateY(-10px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 2px solid #0f488a;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        .card h3 {
+            font-family: 'Orbitron';
+            background: linear-gradient(135deg, #8ccbf1 0%, #e2ebf0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .btn-card {
+            display: block;
+            padding: 12px;
+            border: 1px solid #0f488a;
+            color: #8ccbf1;
+            text-decoration: none;
+            font-family: 'Orbitron';
+            font-size: 0.8rem;
+            transition: 0.3s;
+            border-radius: 5px;
+        }
+
+        .btn-card:hover {
+            background: #0f488a;
+            color: white;
+        }
+
+        /* ========================================
+           FOOTER
+           ======================================== */
+
+        .footer {
+            background: rgb(20, 20, 20);
+            border-top: 2px solid #0f488a;
+            padding: 3rem 0 1rem 0;
+        }
+
+        .footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer-section {
+            padding-left: 25px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            font-family: "Archivo Black", sans-serif;
+            color: #0da8bd;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            letter-spacing: 0.05em;
+        }
+
+        .footer-section h3>span {
+            color: #c72d2d;
+        }
+
+        .footer-section h4 {
+            font-family: "Archivo Black", sans-serif;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            letter-spacing: 0.05em;
+        }
+
+        .footer-section p {
+            color: #ddd;
+            line-height: 1.5;
+            font-size: 1.1em;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-family: monospace;
+            font-size: 1.1em;
+        }
+
+        .footer-section ul li a:hover {
+            color: #0db1bd;
+            text-shadow: 0 0 10px rgba(13, 168, 189, 0.5);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-top: 1px solid #0f488a;
+            color: #7a7a7a;
+            font-family: monospace;
+            font-size: 1.3em;
+        }
+
+        .footer-bottom p {
+            margin: 0;
+        }
+
+        /* ========================================
+           RESPONSIVE DESKTOP
+           ======================================== */
+
+        @media (min-width: 800px) {
+            .menu-toggle {
+                display: none;
+            }
+
+            .overlay {
+                display: none !important;
+            }
+
+            nav {
+                position: static;
+                width: auto;
+                height: auto;
+                max-width: none;
+                padding-top: 0;
+                overflow-y: visible;
+                box-shadow: none;
+            }
+
+            nav ul {
+                display: flex;
+                align-items: center;
+            }
+
+            nav ul li a {
+                padding: 10px 20px;
+                font-size: 1.3em;
+            }
+
+            nav ul li a:hover {
+                background-color: #0f488a;
+                color: #ffffff;
+                transform: scale(1.1);
+                border-radius: 10px;
+            }
+
+            /* Submenús en desktop */
+            nav ul ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                min-width: 170px;
+                background-color: white;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                border-radius: 5px;
+                padding: 5px;
+            }
+
+            nav ul li:hover>ul {
+                display: block;
+            }
+
+            nav ul ul li {
+                width: 100%;
+            }
+
+            nav ul ul li a {
+                padding: 12px 20px;
+                font-size: 1.1em;
+            }
+
+            nav ul ul ul {
+                left: 100%;
+                top: 0;
+            }
+
+            nav ul li.has-submenu>a::after {
+                content: '▼';
+                margin-left: 5px;
+                position: static;
+                font-size: 0.7em;
+            }
+
+            nav ul ul li.has-submenu>a::after {
+                content: '►';
+                position: absolute;
+                right: 15px;
+            }
+
+            .logo {
+                font-size: 2em;
+            }
+
+            #hero h1 {
+                font-size: 4em;
+            }
+
+            .grid {
+                padding: 80px 50px 100px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            #hero h1 {
+                font-size: 2.5em;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+                padding: 40px 20px 60px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #hero h1 {
+                font-size: 2em;
+            }
+
+            .grid {
+                padding: 30px 15px 50px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header con navegación del index -->
+    <header>
+        <div class="contenedor">
+            <p class="logo">Tech<span>Core</span></p>
+
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+
+                    <li class="has-submenu">
+                        <a href="componentes.html ">Componentes</a>
+                        <ul>
+                            <li><a href="procesador.html">Procesador</a></li>
+                            <li><a href="ram.html">Memoria RAM</a></li>
+                            <li><a href="case.html">Case</a></li>
+                            <li><a href="refrigeracion.html">Refrigeración</a></li>
+                            <li><a href="mobo.html">Motherboard</a></li>
+                            <li><a href="gpu.html">Tarjeta Gráfica</a></li>
+                            <li><a href="ssd.html">Almacenamiento</a></li>
+                            <li><a href="psu.html">Fuente de Poder</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="compatibilidad-principal.html">Compatibilidad</a>
+                    </li>
+                    <li><a href="galeria.html"> Galería</a></li>
+                    <li><a href="talleres.html"> Talleres</a></li>
+
+                    <li class="has-submenu">
+                        <a href="recursos.html">Recursos</a>
+                        <ul>
+                            <li><a href="#"> Infografía</a></li>
+                            <li><a href="#"> Videos</a></li>
+                            <li><a href="#"> Otros</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <h1>Conoce el interior de tu<br> computadora</h1>
+        <form action="#componentes">
+            <button class="learn-more">
+                <span class="circle" aria-hidden="true">
+                    <span class="icon arrow"></span>
+                </span>
+                <span class="button-text">Explorar</span>
+            </button>
+        </form>
+    </section>
+
+    <!-- Grid de Componentes -->
+    <div class="grid" id="componentes">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?q=80&w=1000" alt="Procesador">
+            <h3>PROCESADOR</h3>
+            <a href="cpu.html" class="btn-card">ACCEDER AL NÚCLEO</a>
+        </div>
+
+        <div class="card">
+            <img src="https://www.acerstore.cl/cdn/shop/articles/p-pexels-nana-dua-8622911_jpg.jpg?v=1729285788"
+                alt="GPU">
+            <h3>GPU</h3>
+            <a href="gpu.html" class="btn-card">ACCEDER AL NÚCLEO</a>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1562976540-1502c2145186?q=80&w=1000" alt="RAM">
+            <h3>RAM</h3>
+            <a href="ram.html" class="btn-card">ACCEDER AL NÚCLEO</a>
+        </div>
+
+        <div class="card">
+            <img src="https://i.ytimg.com/vi/N2diJyt2de4/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAfZF-eIy3L221uFbD_G37yRgU_vg"
+                alt="SSD">
+            <h3>SSD</h3>
+            <a href="ssd.html" class="btn-card">ACCEDER AL NÚCLEO</a>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1000" alt="Motherboard">
+            <h3>MOTHERBOARD</h3>
+            <a href="mobo.html" class="btn-card">ACCEDER AL NÚCLEO</a>
+        </div>
+
+        <div class="card">
+            <img src="https://hardzone.es/app/uploads-hardzone.es/2024/01/cooler-master-v-platinum-v2.jpg?x=500&y=295&quality=80"
+                alt="PSU">
+            <h3>PSU</h3>
+            <a href="psu.html" class="btn-card">ACCEDER AL NÚCLEO</a>
+        </div>
+
+        <div class="card">
+            <img src="https://i.blogs.es/256b98/thermaltake/650_1200.jpg" alt="Cooling">
+            <h3>COOLING</h3>
+            <a href="refrigeracion.html" class="btn-card">ACCEDER AL NÚCLEO</a>
+        </div>
+
+        <div class="card">
+            <img src="https://www.profesionalreview.com/wp-content/uploads/2018/10/formatos-cajas-pc-atx-matx-itx.jpg"
+                alt="Case">
+            <h3>CASE</h3>
+            <a href="case.html" class="btn-card">ACCEDER AL NÚCLEO</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Tech<span>Core</span></h3>
+                    <p>Aprende sobre los componentes de la PC y comprende cómo funciona el hardware desde su base.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="componentes.html">Componentes</a></li>
+                        <li><a href="compatibilidad-principal.html">Compatibilidad</a></li>
+                        <li><a href="talleres.html">Talleres</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                        <li><a href="recursos.html">Recursos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="compatibilidad-principal.html">Guía de Procesadores</a></li>
+                        <li><a href="compatibilidad-principal.html">Verificar Compatibilidad</a></li>
+                        <li><a href="talleres.html">Actividades Interactivas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p style="color: #ddd; line-height: 1.8;">
+                        <i class="fas fa-user-graduate" style="color: #0f488a; margin-right: 0.5rem;"></i>Estudiantes de
+                        Bachillerato<br>
+                        <i class="fas fa-map-marker-alt" style="color: #0f488a; margin-right: 0.5rem;"></i> Guayaquil,
+                        Ecuador
+                    </p>
+                    <p style="color: #0f488a; margin-top: 1rem; font-weight: bold;">
+                        <i class="fas fa-graduation-cap"></i> Proyecto Educativo
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TechCore - Proyecto Educativo de Informática | Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript con la misma funcionalidad del index -->
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const mainNav = document.getElementById('mainNav');
+        const overlay = document.getElementById('overlay');
+        const submenuItems = document.querySelectorAll('.has-submenu');
+
+        // Toggle menú hamburguesa
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            mainNav.classList.toggle('active');
+            overlay.classList.toggle('active');
+        });
+
+        // Cerrar menú al hacer clic en overlay
+        overlay.addEventListener('click', () => {
+            menuToggle.classList.remove('active');
+            mainNav.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+
+        // Toggle submenús en mobile
+        submenuItems.forEach(item => {
+            const link = item.querySelector('a');
+
+            link.addEventListener('click', (e) => {
+                // Solo prevenir default en mobile
+                if (window.innerWidth < 800) {
+                    e.preventDefault();
+                    item.classList.toggle('active');
+                }
+            });
+        });
+
+        // Cerrar menú al cambiar tamaño de ventana
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 800) {
+                menuToggle.classList.remove('active');
+                mainNav.classList.remove('active');
+                overlay.classList.remove('active');
+                submenuItems.forEach(item => item.classList.remove('active'));
+            }
+        });
+    </script>
+</body>
+
+</html>

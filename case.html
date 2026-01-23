@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>TECH CORE | Case</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --cyan: #00f2ff; --blue: #0066ff; --dark: #010206; }
+        body { background: var(--dark); color: #ccc; font-family: 'Rajdhani', sans-serif; margin: 0; padding: 40px; }
+        .container { max-width: 1100px; margin: auto; border: 1px solid var(--cyan); background: rgba(0,10,20,0.95); padding: 50px; box-shadow: 0 0 50px rgba(0,242,255,0.1); }
+        h1 { font-family: 'Orbitron'; color: white; border-bottom: 2px solid var(--cyan); padding-bottom: 10px; font-size: 2.5rem; text-shadow: 0 0 15px var(--cyan); }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 30px; }
+        img { width: 100%; height: 500px; object-fit: cover; border: 1px solid var(--blue); box-shadow: 0 0 20px rgba(0,102,255,0.3); }
+        .info-box { background: rgba(0,102,255,0.05); padding: 25px; border-left: 4px solid var(--cyan); margin-bottom: 20px; }
+        h3 { color: var(--cyan); font-family: 'Orbitron'; font-size: 1.1rem; margin-top: 0; }
+        .btn-back { display: inline-block; margin-bottom: 20px; color: var(--cyan); text-decoration: none; font-family: 'Orbitron'; border: 1px solid var(--cyan); padding: 10px 20px; transition: 0.3s; font-size: 0.8rem; letter-spacing: 2px; }
+        .btn-back:hover { background: var(--cyan); color: black; box-shadow: 0 0 15px var(--cyan); }
+        ul { color: var(--cyan); font-weight: bold; list-style: square; line-height: 1.8; }
+        p { text-align: justify; line-height: 1.6; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="componentes.html" class="btn-back">« VOLVER AL SISTEMA</a>
+        <h1>GABINETE (CHASIS)</h1>
+        <div class="grid">
+            <img src="https://www.profesionalreview.com/wp-content/uploads/2018/10/formatos-cajas-pc-atx-matx-itx.jpg">
+            <div>
+                <div class="info-box">
+                    <h3>¿QUÉ ES Y CÓMO FUNCIONA?</h3>
+                    <p>Aunque parece una simple caja, el gabinete es el esqueleto y la piel del ordenador. Su función educativa principal es la <strong>Gestión del Flujo de Aire (Airflow)</strong>. Un buen gabinete debe permitir que entre aire frío por el frente y salga aire caliente por atrás y arriba (convección). Además, actúa como una Jaula de Faraday, protegiendo los componentes internos de interferencias electromagnéticas externas y protegiéndote a ti de descargas eléctricas.</p>
+                </div>
+                <div class="info-box">
+                    <h3>DATOS TÉCNICOS AVANZADOS</h3>
+                    <ul>
+                        <li><strong>Formato:</strong> Full Tower (Para placas E-ATX grandes)</li>
+                        <li><strong>Materiales:</strong> Acero galvanizado, Aluminio cepillado y Vidrio Templado 4mm.</li>
+                        <li><strong>Cámaras:</strong> Diseño de doble cámara (separa la fuente de calor del resto).</li>
+                        <li><strong>Conectividad Frontal:</strong> USB-C 3.2 Gen 2 y Audio HD.</li>
+                        <li><strong>Filtros:</strong> Mallas magnéticas micrométricas (evitan la entrada de polvo).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>TECH CORE | GPU</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --cyan: #00f2ff; --blue: #0066ff; --dark: #010206; }
+        body { background: var(--dark); color: #ccc; font-family: 'Rajdhani', sans-serif; margin: 0; padding: 40px; }
+        .container { max-width: 1100px; margin: auto; border: 1px solid var(--cyan); background: rgba(0,10,20,0.95); padding: 50px; box-shadow: 0 0 50px rgba(0,242,255,0.1); }
+        h1 { font-family: 'Orbitron'; color: white; border-bottom: 2px solid var(--cyan); padding-bottom: 10px; font-size: 2.5rem; text-shadow: 0 0 15px var(--cyan); }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 30px; }
+        img { width: 100%; height: 500px; object-fit: cover; border: 1px solid var(--blue); box-shadow: 0 0 20px rgba(0,102,255,0.3); }
+        .info-box { background: rgba(0,102,255,0.05); padding: 25px; border-left: 4px solid var(--cyan); margin-bottom: 20px; }
+        h3 { color: var(--cyan); font-family: 'Orbitron'; font-size: 1.1rem; margin-top: 0; }
+        .btn-back { display: inline-block; margin-bottom: 20px; color: var(--cyan); text-decoration: none; font-family: 'Orbitron'; border: 1px solid var(--cyan); padding: 10px 20px; transition: 0.3s; font-size: 0.8rem; letter-spacing: 2px; }
+        .btn-back:hover { background: var(--cyan); color: black; box-shadow: 0 0 15px var(--cyan); }
+        ul { color: var(--cyan); font-weight: bold; list-style: square; line-height: 1.8; }
+        p { text-align: justify; line-height: 1.6; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="componentes.html" class="btn-back">« VOLVER AL SISTEMA</a>
+        <h1>TARJETA GRÁFICA (GPU)</h1>
+        <div class="grid">
+            <img src="https://www.acerstore.cl/cdn/shop/articles/p-pexels-nana-dua-8622911_jpg.jpg?v=1729285788">
+            <div>
+                <div class="info-box">
+                    <h3>EL ARTISTA VISUAL</h3>
+                    <p>Mientras el CPU es bueno haciendo pocas cosas complejas, la GPU es excelente haciendo millones de cosas simples a la vez, como calcular el color de cada píxel en tu pantalla. <br><br>
+                    Este modelo cuenta con tecnología <strong>Ray Tracing (Trazado de Rayos)</strong>, que simula el comportamiento físico de la luz real, calculando rebotes, sombras y reflejos en tiempo real para un realismo fotográfico.</p>
+                </div>
+                <div class="info-box">
+                    <h3>DATOS TÉCNICOS</h3>
+                    <ul>
+                        <li><strong>VRAM:</strong> 32GB GDDR7 (Memoria de video dedicada).</li>
+                        <li><strong>Núcleos CUDA:</strong> 16,384 (Pequeños procesadores paralelos).</li>
+                        <li><strong>Ancho de Banda:</strong> 1.5 TB/s (Autopista de datos masiva).</li>
+                        <li><strong>Núcleos Tensor:</strong> Especializados en Inteligencia Artificial (DLSS).</li>
+                        <li><strong>Potencia:</strong> 90 Teraflops (Billones de operaciones flotantes).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

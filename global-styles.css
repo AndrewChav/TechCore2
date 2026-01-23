@@ -1,0 +1,483 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: monospace;
+    margin: 0;
+    background-color: rgb(30, 30, 30);
+
+}
+
+h1 {
+    font-size: 3em;
+    overflow-wrap: break-word;
+    word-break: normal;
+}
+
+h2 {
+    overflow-wrap: break-word;
+    word-break: normal;
+}
+
+
+button.learn-more {
+    width: 13rem;
+    height: auto;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+    margin-bottom: 40px;
+    margin-top: 0;
+}
+
+button.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: #0f488a;
+    border-radius: 1.625rem;
+}
+
+button.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+}
+
+button.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+}
+
+button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+}
+
+button.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.5rem 0;
+    margin: 0 0 0 1.85rem;
+    color: #ffffff;
+    font-weight: bold;
+    line-height: 1.7;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+}
+
+button:hover .circle {
+    width: 100%;
+}
+
+button:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+}
+
+button:hover .button-text {
+    color: #fff;
+}
+
+
+
+header {
+    background-color: rgb(245, 245, 245);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+header .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.logo {
+    font-family: "Archivo Black", sans-serif;
+    margin: 0;
+    font-weight: bold;
+    color: #0da8bd;
+    font-size: 2em;
+}
+
+.logo span {
+    color: #c72d2d;
+}
+
+/* Botón hamburguesa */
+.menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1001;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #0f488a;
+    margin: 6px 0;
+    transition: 0.3s;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-6px, -6px);
+}
+
+/* Navegación mobile */
+nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 400px;
+    height: 100vh;
+    background-color: rgb(245, 245, 245);
+    transition: right 0.3s ease;
+    overflow-y: auto;
+    padding-top: 70px;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+nav.active {
+    right: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    font-size: 1.3em;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #0f488a;
+    color: white;
+
+}
+
+/* Submenús */
+nav ul ul {
+    display: none;
+    background-color: rgba(5, 63, 60, 0.05);
+}
+
+nav ul ul li a {
+    padding-left: 50px;
+    font-size: 1.1em;
+}
+
+nav ul ul ul li a {
+    padding-left: 70px;
+    font-size: 1em;
+}
+
+/* Mostrar submenú cuando está activo */
+nav ul li.active>ul {
+    display: block;
+}
+
+/* Indicador de submenú */
+nav ul li.has-submenu>a::after {
+    content: '▼';
+    position: absolute;
+    right: 30px;
+    font-size: 0.8em;
+    transition: transform 0.3s;
+}
+
+nav ul li.has-submenu.active>a::after {
+    transform: rotate(180deg);
+}
+
+/* Overlay para cerrar menú */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.overlay.active {
+    display: block;
+}
+
+/*====================
+   FOOTER
+   ======================================== */
+
+footer {
+    background: rgb(20, 20, 20);
+    border-top: 2px solid #0f488a;
+    padding: 3rem 0 1rem 0;
+}
+
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.footer-section {
+    padding-left: 25px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+    font-family: "Archivo Black", sans-serif;
+    color: #0da8bd;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    letter-spacing: 0.05em;
+}
+
+.footer-section h3>span {
+    color: #c72d2d;
+}
+
+.footer-section h4 {
+    font-family: "Archivo Black", sans-serif;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    letter-spacing: 0.05em;
+}
+
+.footer-section p {
+    color: #ddd;
+    line-height: 1.5;
+    font-size: 1.1em;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+    color: #ddd;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: monospace;
+    font-size: 1.1em;
+}
+
+.footer-section ul li a:hover {
+    color: #0db1bd;
+    text-shadow: 0 0 10px rgba(13, 168, 189, 0.5);
+    padding-left: 5px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-top: 1px solid #0f488a;
+    color: #7a7a7a;
+    font-family: monospace;
+    font-size: 1.3em;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Footer simple (para páginas con footer básico) */
+footer.simple-footer {
+    background: rgb(20, 20, 20);
+    border-top: 2px solid #0f488a;
+    padding: 20px;
+    text-align: center;
+}
+
+footer.simple-footer p {
+    color: #7a7a7a;
+    font-size: 1.2em;
+    margin: 0;
+}
+
+/* ========================================
+   RESPONSIVE DESKTOP
+   ======================================== */
+
+@media (min-width: 800px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .overlay {
+        display: none !important;
+    }
+
+    nav {
+        position: static;
+        width: auto;
+        height: auto;
+        max-width: none;
+        padding-top: 0;
+        overflow-y: visible;
+        box-shadow: none;
+    }
+
+    nav ul {
+        display: flex;
+        align-items: center;
+    }
+
+    nav ul li {
+        position: relative;
+    }
+
+    nav ul li a {
+        padding: 10px 20px;
+        font-size: 1.3em;
+    }
+
+    nav ul li a:hover {
+        background-color: #0f488a;
+        color: #ffffff;
+        transform: scale(1.1);
+        border-radius: 10px;
+    }
+
+    /* Submenús en desktop */
+    nav ul ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 170px;
+        background-color: white;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+    nav ul li:hover>ul {
+        display: block;
+    }
+
+    nav ul ul li {
+        width: 100%;
+    }
+
+    nav ul ul li a {
+        padding: 12px 20px;
+        font-size: 1.1em;
+    }
+
+    nav ul ul ul {
+        left: 100%;
+        top: 0;
+    }
+
+    nav ul li.has-submenu>a::after {
+        content: '▼';
+        margin-left: 5px;
+        position: static;
+        font-size: 0.7em;
+    }
+
+    nav ul ul li.has-submenu>a::after {
+        content: '►';
+        position: absolute;
+        right: 15px;
+    }
+}
+
+/* ========================================
+   UTILIDADES
+   ======================================== */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Espaciado superior para contenido después del header fijo */
+.main-content {
+    margin-top: 60px;
+}

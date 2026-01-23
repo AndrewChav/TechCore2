@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechCore</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+   <header>
+        <div class="contenedor">
+            <p class="logo">Tech<span>Core</span></p></a>
+            
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+
+                    <li class="has-submenu">
+                        <a href="componentes.html ">Componentes</a>
+                        <ul>
+                            <li><a href="procesador.html">Procesador</a></li>
+                            <li><a href="ram.html">Memoria RAM</a></li>
+                            <li><a href="case.html">Case</a></li>
+                            <li><a href="refrigeracion.html">Refrigeración</a></li>
+                            <li><a href="mobo.html">Motherboard</a></li>
+                            <li><a href="gpu.html">Tarjeta Gráfica</a></li>
+                            <li><a href="ssd.html">Almacenamiento</a></li>
+                            <li><a href="psu.html">Fuente de Poder</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="compatibilidad-principal.html">Compatibilidad</a></li>
+                    <li><a href="galeria.htlm">Galería</a></li>
+                    <li><a href="talleres.html">Talleres</a></li>
+
+                    <li class="has-submenu">
+                        <a href="recursos.html">Recursos</a>
+                        <ul>
+                            <li><a href="#">Infografía</a></li>
+                            <li><a href="#">Videos</a></li>
+                            <li><a href="#">Otros</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="overlay" id="overlay"></div>
+
+    <section id="hero">
+        <h1>Conoce el interior de tu<br> computadora</h1>
+        <form action="#introduccion">
+            <button  class="learn-more">
+                <span class="circle" aria-hidden="true">
+                    <span class="icon arrow"></span>
+                </span>
+                <span class="button-text">Saber Más</span> 
+            </button>
+        </form>
+    </section>
+
+  <section id="introduccion" >
+    <div class="container">
+        <div class="imagen"></div>
+        <div class="texto">
+            <h2>¿Qué es este sitio?</h2>
+            <p>Este sitio web ha sido diseñado como un apoyo educativo para asignaturas de Tecnología, Informática o similares. Aquí podrás aprender sobre los componentes del PC, sus funciones, compatibilidades, y mucho más, de forma sencilla, visual y estructurada.</p>
+        </div>
+    </div>
+  </section>
+
+<section id="apartados">
+    <div class="container">
+        <h2>¿Qué vas a encontrar aquí?</h2>
+
+        <!-- Componentes -->
+        <div class="cartamadre">
+            <div class="Info-apartado">
+                <h2 class="carta-componentes">Descubre</h2>
+                <h3>los componentes de la PC</h3>
+                <p>En esta sección aprenderás cuáles son las partes que conforman una computadora y cuál es la función
+                    de cada una. Conocer los componentes te permitirá entender cómo trabaja el hardware y por qué cada
+                    pieza es importante para el funcionamiento del equipo.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-img"> <img src="componentes.webp" alt="Imagen de componentes"></div>
+                <div class="card-info">
+                    <div class="card-text">
+                        <p class="text-title">Componentes</p>
+                        <p class="text-subtitle">Más Información</p>
+                    </div>
+                    <a href="componentes.html">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 28 25" class="icon">
+                            <path
+                                d="M13.145 2.13l1.94-1.867 12.178 12-12.178 12-1.94-1.867 8.931-8.8H.737V10.93h21.339z">
+                            </path>
+                        </svg>
+                    </div>
+                </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compatibilidad -->
+        <div class="cartamadre">
+            <div class="Info-apartado">
+                <h2 class="carta-compatibilidad">Aprende sobre</h2>
+                <h3>la compatibilidad</h3>
+                <p>Descubre cómo saber si los componentes que tienes o piensas comprar son compatibles entre sí.
+                    Entenderás conceptos clave como el tipo de socket del procesador, tipos de memoria RAM, y potencia
+                    de la fuente de alimentación.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-img"> <img src="compatibilidad.jpg" alt="Imagen de compatibilidad entre refrigeracion y procesador"></div>
+                <div class="card-info">
+                    <div class="card-text">
+                        <p class="text-title">Compatibilidad</p>
+                        <p class="text-subtitle">Más Información</p>
+                    </div>
+                    <a href="compatibilidad.html">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 28 25" class="icon">
+                                <path
+                                    d="M13.145 2.13l1.94-1.867 12.178 12-12.178 12-1.94-1.867 8.931-8.8H.737V10.93h21.339z">
+                                </path>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Talleres -->
+        <div class="cartamadre">
+            <div class="Info-apartado">
+                <h2 class="carta-talleres">Practica con</h2>
+                <h3>talleres interactivos</h3>
+                <p>Refuerza tus conocimientos con actividades prácticas y guías paso a paso. Aquí podrás simular el
+                    montaje de un PC, resolver ejercicios interactivos y poner a prueba lo aprendido en clase o de forma
+                    autodidacta.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-img"><img src="talleres.png" alt="Imagen de realizacion de taller online"></div>
+                <div class="card-info">
+                    <div class="card-text">
+                        <p class="text-title">Talleres</p>
+                        <p class="text-subtitle">Más Información</p>
+                    </div>
+                    <a href="talleres.html">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 28 25" class="icon">
+                                <path
+                                    d="M13.145 2.13l1.94-1.867 12.178 12-12.178 12-1.94-1.867 8.931-8.8H.737V10.93h21.339z">
+                                </path>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recursos -->
+        <div class="cartamadre">
+            <div class="Info-apartado">
+                <h2 class="carta-recursos">Accede a</h2>
+                <h3>recursos educativos</h3>
+                <p>Accede a materiales complementarios como fichas de repaso, glosarios de términos, guías en PDF y
+                    enlaces útiles. Todo pensado para ayudarte en tus estudios o para ampliar tus conocimientos sobre
+                    hardware.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-img"><img src="recursos.png" alt="Imagen de recursos tecnológicos"></div>
+                <div class="card-info">
+                    <div class="card-text">
+                        <p class="text-title">Recursos</p>
+                        <p class="text-subtitle">Más Información</p>
+                    </div>
+                    <a href="recursos.html">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 28 25" class="icon">
+                                <path
+                                    d="M13.145 2.13l1.94-1.867 12.178 12-12.178 12-1.94-1.867 8.931-8.8H.737V10.93h21.339z">
+                                </path>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--Carrusel -->
+    <div class="container2">
+        <h2><span>Explora</span> nuestra galería tecnológica</h2>
+        <form action="galeria.html">
+        <button class="cssbuttons-io-button">
+            Click Aquí
+            <div class="icon">
+                <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                        fill="currentColor"></path>
+                </svg>
+            </div>
+        </button>
+        </form>
+        <div class="carrusel-wrapper">
+            <div class="carrusel-track">
+                <!-- Primera serie de cards -->
+                <div class="card-carrusel">
+                    <div class="card-img-carrusel">
+                        <img src="procesador.png" alt="Procesador">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-text">
+                            <p class="text-title">Procesador</p>
+                            <p class="text-subtitle">Intel Core i7</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card-carrusel">
+                    <div class="card-img-carrusel">
+                        <img src="ram.png" alt="Memoria RAM">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-text">
+                            <p class="text-title">Memoria RAM</p>
+                            <p class="text-subtitle">DDR4 16GB</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card-carrusel">
+                    <div class="card-img-carrusel">
+                        <img src="gpu.png" alt="Tarjeta Gráfica">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-text">
+                            <p class="text-title">Tarjeta Gráfica</p>
+                            <p class="text-subtitle">RTX 4070</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card-carrusel">
+                    <div class="card-img-carrusel">
+                        <img src="ssd.png" alt="SSD">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-text">
+                            <p class="text-title">SSD</p>
+                            <p class="text-subtitle">1TB NVMe</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card-carrusel">
+                    <div class="card-img-carrusel">
+                        <img src="mobo.png" alt="Motherboard">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-text">
+                            <p class="text-title">Motherboard</p>
+                            <p class="text-subtitle">ATX Gaming</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card-carrusel">
+                    <div class="card-img-carrusel">
+                        <img src="fuente.png" alt="Fuente">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-text">
+                            <p class="text-title">Fuente</p>
+                            <p class="text-subtitle">750W 80+ Gold</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Segunda serie (duplicado para efecto infinito) -->
+                <div class="card-carrusel">
+                    <div class="card-img-carrusel">
+                        <img src="procesador.png" alt="Procesador">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-text">
+                            <p class="text-title">Procesador</p>
+                            <p class="text-subtitle">Intel Core i7</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card-carrusel">
+                    <div class="card-img-carrusel">
+                        <img src="ram.png" alt="Memoria RAM">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-text">
+                            <p class="text-title">Memoria RAM</p>
+                            <p class="text-subtitle">DDR4 16GB</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card-carrusel">
+                    <div class="card-img-carrusel">
+                        <img src="gpu.png" alt="Tarjeta Gráfica">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-text">
+                            <p class="text-title">Tarjeta Gráfica</p>
+                            <p class="text-subtitle">RTX 4070</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card-carrusel">
+                    <div class="card-img-carrusel">
+                        <img src="ssd.png" alt="SSD">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-text">
+                            <p class="text-title">SSD</p>
+                            <p class="text-subtitle">1TB NVMe</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card-carrusel">
+                    <div class="card-img-carrusel">
+                        <img src="mobo.png" alt="Motherboard">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-text">
+                            <p class="text-title">Motherboard</p>
+                            <p class="text-subtitle">ATX Gaming</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card-carrusel">
+                    <div class="card-img-carrusel">
+                        <img src="fuente.png" alt="Fuente">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-text">
+                            <p class="text-title">Fuente</p>
+                            <p class="text-subtitle">750W 80+ Gold</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    
+</section>
+
+  <section id="sabermas">
+    <h2>¿Listo para aprender?</h2>
+    <form action="#apartados">
+        <button class="learn-more">
+            <span class="circle" aria-hidden="true">
+                <span class="icon arrow"></span>
+            </span>
+            <span class="button-text">Saber Más</span>
+        </button>
+    </form>
+  </section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Tech<span>Core</span></h3>
+                <p>Aprende sobre los componentes de la PC y comprende cómo funciona el hardware desde su base.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#">Componentes</a></li>
+                    <li><a href="compatibilidad.html">Compatibilidad</a></li>
+                    <li><a href="#">Talleres</a></li>
+                    <li><a href="#">Galería</a></li>
+                    <li><a href="#">Recursos</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Recursos</h4>
+                <ul>
+                    <li><a href="compatibilidad-principal.html">Guía de Procesadores</a></li>
+                    <li><a href="compatibilidad-principal.html">Verificar Compatibilidad</a></li>
+                    <li><a href="talleres.html">Actividades Interactivas</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <p style="color: #ddd; line-height: 1.8;">
+                    <i class="fas fa-user-graduate" style="color: #0f488a; margin-right: 0.5rem;"></i>Estudiantes de Bachillerato<br>
+                    <i class="fas fa-map-marker-alt" style="color: #0f488a; margin-right: 0.5rem;"></i> Guayaquil, Ecuador
+                </p>
+                <p style="color: #0f488a; margin-top: 1rem; font-weight: bold;">
+                <i class="fas fa-graduation-cap"></i> Proyecto Educativo
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TechCore - Proyecto Educativo de Informática | Todos los derechos reservados</p>
+        </div>
+    </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
+

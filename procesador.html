@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>TECH CORE | CPU</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --cyan: #00f2ff; --blue: #0066ff; --dark: #010206; }
+        body { background: var(--dark); color: #ccc; font-family: 'Rajdhani', sans-serif; margin: 0; padding: 40px; }
+        .container { max-width: 1100px; margin: auto; border: 1px solid var(--cyan); background: rgba(0,10,20,0.95); padding: 50px; box-shadow: 0 0 50px rgba(0,242,255,0.1); }
+        h1 { font-family: 'Orbitron'; color: white; border-bottom: 2px solid var(--cyan); padding-bottom: 10px; font-size: 2.5rem; text-shadow: 0 0 15px var(--cyan); }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 30px; }
+        img { width: 100%; height: 500px; object-fit: cover; border: 1px solid var(--blue); box-shadow: 0 0 20px rgba(0,102,255,0.3); }
+        .info-box { background: rgba(0,102,255,0.05); padding: 25px; border-left: 4px solid var(--cyan); margin-bottom: 20px; }
+        h3 { color: var(--cyan); font-family: 'Orbitron'; font-size: 1.1rem; margin-top: 0; }
+        .btn-back { display: inline-block; margin-bottom: 20px; color: var(--cyan); text-decoration: none; font-family: 'Orbitron'; border: 1px solid var(--cyan); padding: 10px 20px; transition: 0.3s; font-size: 0.8rem; letter-spacing: 2px; }
+        .btn-back:hover { background: var(--cyan); color: black; box-shadow: 0 0 15px var(--cyan); }
+        ul { color: var(--cyan); font-weight: bold; list-style: square; line-height: 1.8; }
+        p { text-align: justify; line-height: 1.6; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="componentes.html" class="btn-back">« VOLVER AL SISTEMA</a>
+        <h1>PROCESADOR (CPU)</h1>
+        <div class="grid">
+            <img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?q=80&w=1000">
+            <div>
+                <div class="info-box">
+                    <h3>EL CEREBRO DEL SISTEMA</h3>
+                    <p>El CPU (Unidad Central de Procesamiento) es el encargado de realizar todos los cálculos matemáticos y lógicos. Imagina que es el "Jefe de Obra": da las órdenes a los demás componentes. <br><br>
+                    Este modelo utiliza una arquitectura <strong>Híbrida</strong>: tiene "Núcleos de Rendimiento" (P-Cores) para tareas pesadas como juegos, y "Núcleos de Eficiencia" (E-Cores) para tareas de fondo como el correo o antivirus, ahorrando energía.</p>
+                </div>
+                <div class="info-box">
+                    <h3>DATOS TÉCNICOS</h3>
+                    <ul>
+                        <li><strong>Velocidad de Reloj:</strong> 6.2 GHz (Ciclos por segundo: 6.2 mil millones).</li>
+                        <li><strong>Núcleos:</strong> 24 Núcleos Físicos (8 Potentes + 16 Eficientes).</li>
+                        <li><strong>Litografía:</strong> 2 nanómetros (Transistores microscópicos).</li>
+                        <li><strong>Caché L3:</strong> 128MB (Memoria ultra-rápida interna).</li>
+                        <li><strong>TDP:</strong> 253W (Calor generado bajo carga máxima).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

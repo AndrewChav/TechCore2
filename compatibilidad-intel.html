@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compatibilidad Intel - TechCore</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="global-styles.css">
+    <link rel="stylesheet" href="compatibilidad-styles.css">
+</head>
+
+<body class="body">
+    <header>
+        <div class="contenedor">
+            <p class="logo">Tech<span>Core</span></p>
+    
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+    
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html"> Inicio</a></li>
+    
+                    <li class="has-submenu">
+                        <a href="componentes.html ">Componentes</a>
+                        <ul>
+                            <li><a href="procesador.html">Procesador</a></li>
+                            <li><a href="ram.html">Memoria RAM</a></li>
+                            <li><a href="case.html">Case</a></li>
+                            <li><a href="refrigeracion.html">Refrigeración</a></li>
+                            <li><a href="mobo.html">Motherboard</a></li>
+                            <li><a href="gpu.html">Tarjeta Gráfica</a></li>
+                            <li><a href="ssd.html">Almacenamiento</a></li>
+                            <li><a href="psu.html">Fuente de Poder</a></li>
+                        </ul>
+                    </li>
+    
+                    <li><a href="compatibilidad-principal.html"> Compatibilidad</a></li>
+                    <li><a href="galeria.html">Galería</a></li>
+                    <li><a href="talleres.html">Talleres</a></li>
+    
+                    <li class="has-submenu">
+                        <a href="recursos.html"> Recursos</a>
+                        <ul>
+                            <li><a href="#"> Infografía</a></li>
+                            <li><a href="#">Videos</a></li>
+                            <li><a href="#"> Otros</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    
+    <div class="overlay" id="overlay"></div>
+    <section class="banner">
+        <div id="particles-js-banner"></div>
+        <div class="banner-content">
+            <h1>COMPATIBILIDAD ENTRE LA PLACA MADRE INTEL Y EL PROCESADOR</h1>
+            <p>Descubre cómo verificar la compatibilidad entre placas madre Intel y procesadores Core. Aprende sobre los
+                sockets LGA, chipsets series H, B y Z, y asegura un rendimiento óptimo en tu configuración.</p>
+            <a href="#compatibilidad-intel" class="boton">Explorar Compatibilidad Intel</a>
+        </div>
+    </section>
+    <br id="compatibilidad-intel">
+    <main>
+        <section>
+            <div class="hola">
+            <div class="contenedor">
+                <h1 class="seccion">Compatibilidad entre la Placa Madre Intel
+                    <br> y el Procesador</h1>
+                <div class="intro">
+                    <p>La compatibilidad entre una placa madre Intel y su procesador trasciende lo físico para
+                        convertirse en una conexión
+                        inteligente: el chipset y el BIOS están finamente sincronizados con la arquitectura del CPU,
+                        creando un ecosistema donde
+                        cada componente anticipa las necesidades del otro. Esta armonía no solo garantiza
+                        funcionamiento, sino un rendimiento
+                        optimizado donde el socket, los reguladores de voltaje y los buses de comunicación operan en un
+                        diálogo perfecto,
+                        eliminando cuellos de botella y desbloqueando el potencial completo de tu procesador Intel como
+                        ningún otro fabricante
+                        puede lograr.</p>
+                </div>
+            </div></div>
+            <div class="hola">
+                <div class="intro">
+                    <h3><span class="icon"></span>Verificar el Socket (LGA)</h3>
+                    <p>El socket es la conexión física entre procesador y placa base. Si el socket no coincide, el
+                        procesador no encaja
+                        físicamente.</p>
+                    <h3>Sockets Intel por generación</h3>
+                    <table class="info">
+                        <thead>
+                            <tr class="table">
+                                <th>Generación de procesadores</th>
+                                <th>Socket (LGA)</th>
+                                <th>Compatibilidad de memoria</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table">
+                                <td>1ª generación</td>
+                                <td>LGA 1156</td>
+                                <td>DDR3</td>
+                            </tr>
+                            <tr class="table">
+                                <td>2ª y 3ª generación</td>
+                                <td>LGA 1155</td>
+                                <td>DDR3</td>
+                            </tr>
+                            <tr class="table">
+                                <td>4ª y 5ª generación</td>
+                                <td>LGA 1150</td>
+                                <td>DDR3/DDR3L</td>
+                            </tr>
+                            <tr class="table">
+                                <td>6ª y 7ª generación</td>
+                                <td>LGA 1151 V1</td>
+                                <td>DDR4</td>
+                            </tr>
+                            <tr class="table">
+                                <td>8ª y 9ª generación</td>
+                                <td>LGA 1151 V2</td>
+                                <td>DDR4</td>
+                            </tr>
+                            <tr class="table">
+                                <td>10ª y 11ª generación</td>
+                                <td>LGA 1200</td>
+                                <td>DDR4/DDR5 (segun modelo)</td>
+                            </tr>
+                            <tr class="table">
+                                <td>12ª, 13ª y 14ª generación</td>
+                                <td>LGA 1700</td>
+                                <td>DDR4/DDR5 (segun modelo)</td>
+                            </tr>
+                            <tr class="table">
+                                <td>Procesadores Ultra</td>
+                                <td>LGA 1851</td>
+                                <td>Solo DDR5</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="nota">
+                        <strong>Importante:</strong> Aunque dos procesadores compartan el mismo socket, no significa que
+                        sean
+                        compatibles con las mismas placas.El chipset también es determinante.
+                    </div>
+                </div>
+                <div class="intro">
+                    <h3><span class="icon"></span>2. Verificar el Chipset y Serie</h3>
+                    <p>El chipset es el componente que permite la comunicación entre el procesador, la memoria RAM y los
+                        demás dispositivos
+                        del sistema. Cada chipset pertenece a una serie, lo que indica su versión y sus capacidades. Por
+                        ejemplo, en una placa
+                        Z790 Gaming, el chipset es Z790, y esa también es su serie. Por tanto, Serie = Versión del
+                        chipset.
+                        <br>
+                        <br>
+                        El chipset no solo determina la compatibilidad con el procesador, sino también la cantidad de
+                        puertos, la versión del
+                        PCIe, el soporte para overclock, el tipo de memoria RAM y las opciones de conectividad.
+                        <br>
+                        <br>
+                        Intel clasifica sus placas madre por series y utiliza distintos zócalos (LGA) según la
+                        generación de procesadores. Las
+                        letras H, B y Z indican el nivel de la placa:
+                    </p>
+
+                    <div class="todo">
+                        <div class="todo-header" onclick="toggleExpand(this)">
+                            <h4>Nivel de la placa</h4>
+                            <span class="todo-icon">▼</span>
+                        </div>
+                        <div class="todo-content">
+                            <div class="todo-content-inner">
+                                <ul class="lista">
+                                    <li><strong>Serie H:</strong>básica, soporta hasta 64 GB de RAM y sus modelos
+                                        siempre terminan en 10.</li>
+                                    <li><strong>Serie B:</strong>: gama media, hasta 128 GB de RAM y terminan en 60.
+                                    </li>
+                                    <li><strong>Serie Z:</strong> gama alta, soporta de 128 GB a 192 GB, con funciones
+                                        de overclock y terminan en 90.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="todo">
+                        <div class="todo-header" onclick="toggleExpand(this)">
+                            <h4>Los modelos de Intel suelen terminar en:</h4>
+                            <span class="todo-icon">▼</span>
+                        </div>
+                        <div class="todo-content">
+                            <div class="todo-content-inner">
+                                <ul class="lista">
+                                    <li>10 → Serie H</li>
+                                    <li>60 → Serie B</li>
+                                    <li>90 → Serie Z</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="intro">
+                    <h3><span class="icon"></span>Serie H - Básica</h3>
+                    <p><strong>Ejemplo:</strong>H810, H770, H670, H610</p>
+                    <div class="todo">
+                        <div class="todo-header" onclick="toggleExpand(this)">
+                            <h4>Compatibilidad</h4>
+                            <span class="todo-icon">▼</span>
+                        </div>
+                        <div class="todo-content">
+                            <div class="todo-content-inner">
+                                <ul class="lista">
+                                    <li>Todos los procesadores Intel del socket correspondiente</li>
+                                    <li><strong>H810:</strong>soporta procesadores Core Ultra (LGA 1851)</li>
+                                    <li><strong>H770/H670:</strong>soportan procesadores 12ª, 13ª y 14ª generación (LGA
+                                        1700)</li>
+                                    <li><strong>H610:</strong>soporta procesadores 12ª, 13ª y 14ª generación (LGA 1700)
+                                    </li>
+                                </ul>
+                                <div class="nota">
+                                    <strong>Enfoque:</strong>Orientadas a uso doméstico y de oficina.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="todo">
+                        <div class="todo-header" onclick="toggleExpand(this)">
+                            <h4>Especificaciones técnicas:</h4>
+                            <span class="todo-icon">▼</span>
+                        </div>
+                        <div class="todo-content">
+                            <div class="todo-content-inner">
+                                <ul class="lista">
+                                    <li>Hasta 64 GB de RAM</li>
+                                    <li>Generalmente 2 slots de memoria RAM</li>
+                                    <li>1 ranura M.2</li>
+                                    <li>Sin overclock de CPU</li>
+                                    <li>Menor cantidad de puertos USB y SATA</li>
+                                    <li>PCIe 4.0 (según modelo)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="todo">
+                        <div class="todo-header" onclick="toggleExpand(this)">
+                            <h4>Procesadores Compatibles</h4>
+                            <span class="todo-icon">▼</span>
+                        </div>
+                        <div class="todo-content">
+                            <div class="todo-content-inner">
+                                <div class="intro">
+                                    <div class="todo">
+                                        <ul class="lista">
+                                            <li>Todos los procesadores Intel del socket correspondiente</li>
+                                            <li>Enfoque en Core i3, i5, i7 (modelos estándar sin sufijo)</li>
+                                            <li><strong>Ejemplos:</strong> i5-14400, i7-13700, i3-12100, Core Ultra 5
+                                                245</li>
+                                        </ul>
+                                        <br>
+                                        <div class="nota">
+                                            <strong>Ideal Para:</strong> Uso doméstico, oficina, tareas básicas
+                                            <br>
+                                            <strong>Terminación del modelo:</strong>10 (H610, H810)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+            </div>
+            <div class="hola">
+            <div class="intro">
+                <h3><span class="icon"></span>Serie B - Gama Media</h3>
+                <p><strong>Ejemplo:</strong>B860, B760, B660</p>
+                <div class="todo">
+
+                    <div class="todo-header" onclick="toggleExpand(this)">
+                        <h4>Compatibilidad</h4>
+                        <span class="todo-icon">▼</span>
+                    </div>
+                    <div class="todo-content">
+                        <div class="todo-content-inner">
+                            <ul class="lista">
+                                <li>Equilibrio entre precio y rendimiento</li>
+                                <li><strong>B860:</strong>soporta procesadores Core Ultra (LGA 1851)</li>
+                                <li><strong>B760:</strong>soporta procesadores 12ª, 13ª y 14ª generación (LGA 1700)</li>
+                                <li><strong>B660:</strong>: soporta procesadores 12ª, 13ª y 14ª generación (LGA 1700)
+                                </li>
+                            </ul>
+                            <div class="nota">
+                                <strong>Enfoque:</strong> Uso doméstico, oficina, tareas básicas
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="todo">
+                        <div class="todo-header" onclick="toggleExpand(this)">
+                            <h4>Especificaciones técnicas:</h4>
+                            <span class="todo-icon">▼</span>
+                        </div>
+                        <div class="todo-content">
+                            <div class="todo-content-inner">
+                                <ul class="lista">
+                                    <li>Soporte para hasta 128 GB de RAM</li>
+                                    <li>1 a 3 ranuras M.2</li>
+                                    <li>Overclock solo de memoria RAM (no de CPU)</li>
+                                    <li>Interfaz PCIe 4.0 o 5.0 (según el modelo)</li>
+                                    <li>Mayor número de puertos USB y SATA que serie H</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="todo">
+                        <div class="todo-header" onclick="toggleExpand(this)">
+                            <h4>Procesadores compatibles:</h4>
+                            <span class="todo-icon">▼</span>
+                        </div>
+                        <div class="todo-content">
+                            <div class="todo-content-inner">
+                                <ul class="lista">
+                                    <li>Todos los procesadores Intel del socket correspondiente</li>
+                                    <li>Funciona con CPUs "K" pero sin overclock de CPU, solo RAM</li>
+                                    <li>Enfoque en Core i5, i7 e i9</li>
+                                    <li><strong>Ejemplos:</strong> i5-14600, i7-13700, i9-12900, i5-14600K (sin
+                                        overclock de CPU), Core Ultra 7 265
+                                    </li>
+                                </ul>
+                                <div class="nota">
+                                    <strong>Ideal para:</strong>Gaming moderado, productividad, mejor relación
+                                    calidad-precio
+                                    <br>
+                                    <strong>Terminacion del modelo</strong>60 (B660, B760, B860)
+                                    <br>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+
+            <div class="intro">
+                <h3><span class="icon"></span>Serie Z - Gama Alta/Entusiasta</h3>
+                <p><strong>Ejemplo:</strong> Z890, Z790, Z690</p>
+                <div class="todo">
+                    <div class="todo-header" onclick="toggleExpand(this)">
+                        <h4>Compatibilidad:</h4>
+                        <span class="todo-icon">▼</span>
+                    </div>
+                    <div class="todo-content">
+                        <div class="todo-content-inner">
+                            <ul class="lista">
+                                <li>Todos los procesadores Intel del socket correspondiente</li>
+                                <li><strong>Z890:</strong>soporta procesadores Core Ultra (LGA 1851)</li>
+                                <li><strong>Z790:</strong>soporta procesadores 12ª, 13ª y 14ª generación (LGA 1700)</li>
+                                <li><strong>Z690:</strong>soporta procesadores 1 12ª, 13ª y 14ª generación (LGA 1700,
+                                    puede requerir actualización de BIOS)</li>
+
+                            </ul>
+                            <div class="nota">
+                                <strong>Enfoque:</strong> Gama alta con todas las funciones disponibles.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="todo">
+                    <div class="todo-header" onclick="toggleExpand(this)">
+                        <h4>Especificaciones técnicas:</h4>
+                        <span class="todo-icon">▼</span>
+                    </div>
+                    <div class="todo-content">
+                        <div class="todo-content-inner">
+                            <ul class="lista">
+                                <li>Soporta de 128 GB a 192 GB de RAM</li>
+                                <li>3 a 5 ranuras M.2</li>
+                                <li><b>Overclock completo</b> de CPU y RAM</li>
+                                <li>Compatibilidad con PCIe 5.0</li>
+                                <li>Mayor número de fases de poder (VRM) para estabilidad en overclock (14-20+ fases)
+                                </li>
+                                <li>Máxima conectividad: Thunderbolt 4, WiFi 7, Ethernet hasta 10 Gbps</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="todo">
+                    <div class="todo-header" onclick="toggleExpand(this)">
+                        <h4>Procesadores compatibles:</h4>
+                        <span class="todo-icon">▼</span>
+                    </div>
+                    <div class="todo-content">
+                        <div class="todo-content-inner">
+                            <ul class="lista">
+                                <li>Todos los procesadores Intel del socket correspondiente</li>
+                                <li>Especialmente diseñadas para procesadores desbloqueados con sufijo "K" o "KS"</li>
+                                <li>Enfoque en Core i5, i7 e i9 de alto rendimiento</li>
+                                <li><strong>Ejemplos:</strong> i9-14900K, i7-13700K, i5-12600K, i9-13900KS, Core Ultra 9
+                                    285K</li>
+
+                            </ul>
+                            <div class="nota">
+                                <strong>Ideal para:</strong>Gaming de alta gama, overclock, workstations, entusiastas
+                            </div>
+                            <div class="nota">
+                                <strong>Terminación del modelo:</strong> 90 (Z690, Z790, Z890)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+    <br>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Tech<span>Core</span></h3>
+                    <p>Aprende sobre los componentes de la PC y comprende cómo funciona el hardware desde su base.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="#">Componentes</a></li>
+                        <li><a href="compatibilidad.html">Compatibilidad</a></li>
+                        <li><a href="#">Talleres</a></li>
+                        <li><a href="#">Galería</a></li>
+                        <li><a href="#">Recursos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="compatibilidad-principal.html">Guía de Procesadores</a></li>
+                        <li><a href="compatibilidad-principal.html">Verificar Compatibilidad</a></li>
+                        <li><a href="talleres.html">Actividades Interactivas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p style="color: #ddd; line-height: 1.8;">
+                        <i class="fas fa-user-graduate" style="color: #0f488a; margin-right: 0.5rem;"></i>Estudiantes de
+                        Bachillerato<br>
+                        <i class="fas fa-map-marker-alt" style="color: #0f488a; margin-right: 0.5rem;"></i> Guayaquil,
+                        Ecuador
+                    </p>
+                    <p style="color: #0f488a; margin-top: 1rem; font-weight: bold;">
+                        <i class="fas fa-graduation-cap"></i> Proyecto Educativo
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TechCore - Proyecto Educativo de Informática | Todos los derechos reservados</p>
+            </div>
+        </div>
+        </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html> <!-- Particles.js Library -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="script.js"></script>
+<script>
+    particlesJS('particles-js-banner', {
+        particles: {
+            number: { value: 120, density: { enable: true, value_area: 800 } },
+            color: { value: ['#0da8bd', '#0f488a', '#00d4ff'] },
+            shape: { type: 'circle' },
+            opacity: { value: 0.5, random: true, anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false } },
+            size: { value: 3, random: true, anim: { enable: true, speed: 2, size_min: 0.1, sync: false } },
+            line_linked: { enable: true, distance: 150, color: '#0da8bd', opacity: 0.3, width: 1 },
+            move: { enable: true, speed: 2, direction: 'none', random: false, straight: false, out_mode: 'out', bounce: false }
+        },
+        interactivity: {
+            detect_on: 'canvas',
+            events: { onhover: { enable: true, mode: 'grab' }, onclick: { enable: true, mode: 'push' } },
+            modes: { grab: { distance: 140, line_linked: { opacity: 0.5 } }, push: { particles_nb: 4 } }
+        },
+        retina_detect: true
+    });
+
+    // Función para acordeones
+    function toggleExpand(header) {
+        const expandable = header.parentElement;
+        expandable.classList.toggle('active');
+    }
+</script>
+</body>
+
+</html>
