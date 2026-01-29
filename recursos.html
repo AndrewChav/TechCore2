@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechCore - Recursos</title>
+    <link rel="stylesheet" href="recursos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="contenedor">
+            <p class="logo">Tech<span>Core</span></p>
+    
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+    
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+    
+                    <li class="has-submenu">
+                        <a href="componentes.html">Componentes</a>
+                        <ul>
+                            <li><a href="procesador.html">Procesador</a></li>
+                            <li><a href="ram.html">Memoria RAM</a></li>
+                            <li><a href="case.html">Case</a></li>
+                            <li><a href="refrigeracion.html">Refrigeración</a></li>
+                            <li><a href="mobo.html">Motherboard</a></li>
+                            <li><a href="gpu.html">Tarjeta Gráfica</a></li>
+                            <li><a href="ssd.html">Almacenamiento</a></li>
+                            <li><a href="psu.html">Fuente de Poder</a></li>
+                        </ul>
+                    </li>
+    
+                    <li><a href="compatibilidad-principal.html">Compatibilidad</a></li>
+                    <li><a href="galeria.html">Galería</a></li>
+                    <li><a href="talleres.html">Talleres</a></li>
+    
+                    <li class="has-submenu">
+                        <a href="recursos.html">Recursos</a>
+                        <ul>
+                            <li><a href="#infografias">Infografía</a></li>
+                            <li><a href="#videos">Videos</a></li>
+                            <li><a href="#otros">Otros</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <h1>Recursos<br>Educativos</h1>
+        <p class="hero-subtitle">Materiales de apoyo para tu aprendizaje</p>
+        <form action="#infografias">
+            <button class="learn-more">
+                <span class="circle" aria-hidden="true">
+                    <span class="icon arrow"></span>
+                </span>
+                <span class="button-text">Explorar</span>
+            </button>
+        </form>
+    </section>
+
+    <!-- Sección Infografías -->
+<section id="infografias" class="seccion-recursos">
+  <div class="container">
+    <div class="seccion-header">
+      <h2>Infografías</h2>
+      <p class="descripcion-seccion">
+        Recursos visuales para entender mejor los componentes de PC
+      </p>
+    </div>
+
+    <div class="grid-recursos">
+
+      <!-- INFOGRAFÍA 1 -->
+      <div class="recurso-card">
+        <div class="recurso-icono"><i class="fas fa-wrench"></i></div>
+        <div class="recurso-contenido">
+          <h3>Diagnóstico y Solución de Problemas</h3>
+          <p>Guía para identificar y resolver problemas comunes en una PC</p>
+          <div class="recurso-meta">
+            <span><i class="fas fa-file-pdf"></i> PDF</span>
+            <span><i class="fas fa-file"></i> Infografía</span>
+          </div>
+          <a href="Diagnóstico y Solución de Problemas.pdf"
+             class="btn-descargar"
+             target="_blank"
+             rel="noopener noreferrer">
+            <i class="fas fa-file-pdf"></i> Ver PDF
+          </a>
+        </div>
+      </div>
+
+      <!-- INFOGRAFÍA 2 -->
+      <div class="recurso-card">
+        <div class="recurso-icono"><i class="fas fa-check-circle"></i></div>
+        <div class="recurso-contenido">
+          <h3>Cómo Verificar la Compatibilidad</h3>
+          <p>Aprende a verificar que los componentes sean compatibles</p>
+          <div class="recurso-meta">
+            <span><i class="fas fa-file-pdf"></i> PDF</span>
+            <span><i class="fas fa-file"></i> Infografía</span>
+          </div>
+          <a href="COMO VERIFICAR LA COMPATIBILIDAD.pdf"
+             class="btn-descargar"
+             target="_blank"
+             rel="noopener noreferrer">
+            <i class="fas fa-file-pdf"></i> Ver PDF
+          </a>
+        </div>
+      </div>
+
+      <!-- INFOGRAFÍA 3 -->
+      <div class="recurso-card">
+        <div class="recurso-icono"><i class="fas fa-laptop"></i></div>
+        <div class="recurso-contenido">
+          <h3>Componentes Básicos</h3>
+          <p>Conoce los componentes esenciales de una computadora</p>
+          <div class="recurso-meta">
+            <span><i class="fas fa-file-pdf"></i> PDF</span>
+            <span><i class="fas fa-file"></i> Infografía</span>
+          </div>
+          <a href="Infografía COMPONENTES BASICOS.pdf"
+             class="btn-descargar"
+             target="_blank"
+             rel="noopener noreferrer">
+            <i class="fas fa-file-pdf"></i> Ver PDF
+          </a>
+        </div>
+      </div>
+
+      <!-- INFOGRAFÍA 4 -->
+      <div class="recurso-card">
+        <div class="recurso-icono"><i class="fas fa-microchip"></i></div>
+        <div class="recurso-contenido">
+          <h3>AMD vs Intel</h3>
+          <p>Comparativa visual entre procesadores AMD e Intel</p>
+          <div class="recurso-meta">
+            <span><i class="fas fa-file-pdf"></i> PDF</span>
+            <span><i class="fas fa-file"></i> Infografía</span>
+          </div>
+          <a href="Infografía AMD E INTEL.pdf"
+             class="btn-descargar"
+             target="_blank"
+             rel="noopener noreferrer">
+            <i class="fas fa-file-pdf"></i> Ver PDF
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!--videos-->
+
+   <section id="videos" class="seccion-recursos seccion-videos">
+  <div class="container">
+
+    <div class="seccion-header">
+      <h2>Videos Tutoriales</h2>
+      <p class="descripcion-seccion">
+        Recursos audiovisuales utilizados exclusivamente con fines educativos
+      </p>
+    </div>
+
+    <div class="grid-videos">
+
+      <!-- VIDEO 1 -->
+      <div class="video-card-embed">
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/Syg2AWLNAiM"
+            title="Cómo conectar todos los cables de una PC"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <div class="video-info">
+          <h3>Cómo conectar todos los cables de una PC</h3>
+          <p class="video-creator">
+            <strong>Creador:</strong> SHUX
+          </p>
+          <p class="video-descripcion">
+            Explicación clara y práctica sobre la correcta conexión de los cables internos de una computadora.
+          </p>
+
+          <div class="video-creditos">
+            <p><em>Video propiedad de su creador original. Uso exclusivo con fines educativos.</em></p>
+            <a href="https://www.youtube.com/watch?v=Syg2AWLNAiM" target="_blank" class="btn-youtube">
+              Ver en YouTube
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIDEO 2 -->
+      <div class="video-card-embed">
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/mHPpYnDq6ck"
+            title="Cómo ensamblar una PC barata paso a paso"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <div class="video-info">
+          <h3>Cómo ensamblar una PC barata paso a paso</h3>
+          <p class="video-creator">
+            <strong>Creador:</strong> YANPOL
+          </p>
+          <p class="video-descripcion">
+            Guía completa para el ensamblaje de una computadora económica explicada paso a paso.
+          </p>
+
+          <div class="video-creditos">
+            <p><em>Contenido original del autor. Uso con fines educativos.</em></p>
+            <a href="https://www.youtube.com/watch?v=mHPpYnDq6ck" target="_blank" class="btn-youtube">
+              Ver en YouTube
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIDEO 3 -->
+      <div class="video-card-embed">
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/xMVfdwK5Rg0"
+            title="Errores comunes al dar mantenimiento a tu PC"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <div class="video-info">
+          <h3>Errores comunes al dar mantenimiento a tu PC</h3>
+          <p class="video-creator">
+            <strong>Creador:</strong> Mazthertutoriales
+          </p>
+          <p class="video-descripcion">
+            Recomendaciones para evitar errores frecuentes durante la limpieza y mantenimiento del hardware.
+          </p>
+
+          <div class="video-creditos">
+            <p><em>Derechos reservados a su creador. Uso educativo.</em></p>
+            <a href="https://www.youtube.com/watch?v=xMVfdwK5Rg0" target="_blank" class="btn-youtube">
+              Ver en YouTube
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIDEO 4 -->
+      <div class="video-card-embed">
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/BapiSASAV04"
+            title="Limpieza interna de una PC"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <div class="video-info">
+          <h3>Limpieza interna de una PC</h3>
+          <p class="video-creator">
+            <strong>Creador:</strong> YANPOL
+          </p>
+          <p class="video-descripcion">
+            Demostración práctica del proceso de limpieza interna para mantener el rendimiento del equipo.
+          </p>
+
+          <div class="video-creditos">
+            <p><em>Video utilizado únicamente con fines educativos.</em></p>
+            <a href="https://www.youtube.com/watch?v=BapiSASAV04" target="_blank" class="btn-youtube">
+              Ver en YouTube
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="nota-academica">
+      <p>
+        <strong>Nota académica:</strong> Los videos presentados pertenecen a sus respectivos creadores
+        y se utilizan únicamente con fines educativos dentro de este proyecto escolar.
+      </p>
+    </div>
+
+  </div>
+</section>
+    <!-- Sección Otros Recursos -->
+    <section id="otros" class="seccion-recursos">
+        <div class="container">
+            <div class="seccion-header">
+                <i class="fas fa-folder-open icono-seccion"></i>
+                <h2>Otros Recursos</h2>
+                <p class="descripcion-seccion">Documentos, guías y herramientas complementarias</p>
+            </div>
+
+            <div class="grid-recursos">
+                <div class="recurso-card">
+                    <div class="recurso-icono otros">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="recurso-contenido">
+                        <h3>Guía Completa de Hardware</h3>
+                        <p>Manual en PDF con toda la información sobre componentes de PC</p>
+                        <div class="recurso-meta">
+                            <span><i class="fas fa-file-pdf"></i> PDF</span>
+                            <span><i class="fas fa-download"></i> 8.5 MB</span>
+                        </div>
+                        <a href="#" class="btn-descargar">
+                            <i class="fas fa-download"></i> Descargar
+                        </a>
+                    </div>
+                </div>
+
+                <div class="recurso-card">
+                    <div class="recurso-icono otros">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="recurso-contenido">
+                        <h3>Glosario de Términos</h3>
+                        <p>Diccionario completo de terminología técnica de hardware</p>
+                        <div class="recurso-meta">
+                            <span><i class="fas fa-file-pdf"></i> PDF</span>
+                            <span><i class="fas fa-download"></i> 3.2 MB</span>
+                        </div>
+                        <a href="#" class="btn-descargar">
+                            <i class="fas fa-download"></i> Descargar
+                        </a>
+                    </div>
+                </div>
+
+                <div class="recurso-card">
+                    <div class="recurso-icono otros">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <div class="recurso-contenido">
+                        <h3>Calculadora de PSU</h3>
+                        <p>Herramienta para calcular la potencia necesaria de tu fuente</p>
+                        <div class="recurso-meta">
+                            <span><i class="fas fa-tools"></i> Herramienta</span>
+                            <span><i class="fas fa-globe"></i> Online</span>
+                        </div>
+                        <a href="#" class="btn-usar">
+                            <i class="fas fa-external-link-alt"></i> Usar Ahora
+                        </a>
+                    </div>
+                </div>
+
+                <div class="recurso-card">
+                    <div class="recurso-icono otros">
+                        <i class="fas fa-list-check"></i>
+                    </div>
+                    <div class="recurso-contenido">
+                        <h3>Checklist de Ensamblaje</h3>
+                        <p>Lista de verificación paso a paso para montar tu PC</p>
+                        <div class="recurso-meta">
+                            <span><i class="fas fa-file-pdf"></i> PDF</span>
+                            <span><i class="fas fa-download"></i> 1.2 MB</span>
+                        </div>
+                        <a href="#" class="btn-descargar">
+                            <i class="fas fa-download"></i> Descargar
+                        </a>
+                    </div>
+                </div>
+
+                <div class="recurso-card">
+                    <div class="recurso-icono otros">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <div class="recurso-contenido">
+                        <h3>Enlaces Útiles</h3>
+                        <p>Colección de sitios web recomendados sobre hardware</p>
+                        <div class="recurso-meta">
+                            <span><i class="fas fa-file-pdf"></i> PDF</span>
+                            <span><i class="fas fa-download"></i> 500 KB</span>
+                        </div>
+                        <a href="#" class="btn-descargar">
+                            <i class="fas fa-download"></i> Descargar
+                        </a>
+                    </div>
+                </div>
+
+                <div class="recurso-card">
+                    <div class="recurso-icono otros">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <div class="recurso-contenido">
+                        <h3>Preguntas Frecuentes</h3>
+                        <p>Respuestas a las dudas más comunes sobre hardware</p>
+                        <div class="recurso-meta">
+                            <span><i class="fas fa-file-pdf"></i> PDF</span>
+                            <span><i class="fas fa-download"></i> 2.8 MB</span>
+                        </div>
+                        <a href="#" class="btn-descargar">
+                            <i class="fas fa-download"></i> Descargar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Tech<span>Core</span></h3>
+                    <p>Aprende sobre los componentes de la PC y comprende cómo funciona el hardware desde su base.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="componentes.html">Componentes</a></li>
+                        <li><a href="compatibilidad-principal.html">Compatibilidad</a></li>
+                        <li><a href="talleres.html">Talleres</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                        <li><a href="recursos.html">Recursos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="#infografias">Infografías</a></li>
+                        <li><a href="#videos">Videos Tutoriales</a></li>
+                        <li><a href="#otros">Otros Recursos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p style="color: #ddd; line-height: 1.8;">
+                        <i class="fas fa-user-graduate" style="color: #0f488a; margin-right: 0.5rem;"></i>Estudiantes de Bachillerato<br>
+                        <i class="fas fa-map-marker-alt" style="color: #0f488a; margin-right: 0.5rem;"></i> Guayaquil, Ecuador
+                    </p>
+                    <p style="color: #0f488a; margin-top: 1rem; font-weight: bold;">
+                        <i class="fas fa-graduation-cap"></i> Proyecto Educativo
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TechCore - Proyecto Educativo de Informática | Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="recursos.js"></script>
+</body>
+</html>
