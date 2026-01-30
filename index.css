@@ -137,9 +137,7 @@ header .contenedor {
     color: #0da8bd;
     font-size: 2em;
 }
-.logo span{
-    color: #c72d2d;
-}
+
 /* Botón hamburguesa */
 .menu-toggle {
     display: block;
