@@ -352,9 +352,8 @@ nav ul li.has-submenu.active>a::after {
     padding: 30px;
     transition: all 0.3s ease;
     border: 2px solid transparent;
-    display: flex;
-    flex-direction: column;
     gap: 20px;
+    width: 100%;
 }
 
 .recurso-card:hover {
@@ -375,6 +374,7 @@ nav ul li.has-submenu.active>a::after {
     font-size: 2.5em;
     color: white;
     flex-shrink: 0;
+    margin: 0 auto 20px;
 }
 
 .recurso-icono.otros {
@@ -383,6 +383,7 @@ nav ul li.has-submenu.active>a::after {
 
 .recurso-contenido {
     flex: 1;
+    text-align: center;
 }
 
 .recurso-contenido h3 {
@@ -403,6 +404,7 @@ nav ul li.has-submenu.active>a::after {
     gap: 20px;
     margin: 15px 0;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .recurso-meta span {
@@ -415,6 +417,14 @@ nav ul li.has-submenu.active>a::after {
 
 .recurso-meta i {
     color: #0f488a;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .grid-recursos {
+        max-width: 100%;
+        padding: 0 20px;
+    }
 }
 
 /* Botones de Acción */
