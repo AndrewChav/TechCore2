@@ -345,6 +345,15 @@ nav ul li.has-submenu.active>a::after {
 }
 
 
+/* Grid de Recursos - Centrado */
+.grid-recursos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
 /* Cards de Recursos */
 .recurso-card {
     background: rgba(255, 255, 255, 0.05);
