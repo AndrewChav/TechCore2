@@ -758,12 +758,13 @@ nav ul li.has-submenu > a::after {
 #desarrolladores .container h2 {
     font-size: 4em;
     margin-bottom: 10px;
-    color: #0da8bd;
+    color: #00f5ff;
+    text-shadow: 0 0 20px rgba(0, 245, 255, 0.5);
 }
 
 .subtitle-dev {
     font-size: 1.5em;
-    color: #ddd;
+    color: #a8b2d1;
     margin-bottom: 50px;
 }
 
@@ -777,18 +778,21 @@ nav ul li.has-submenu > a::after {
 }
 
 .developer-card {
-    background: rgba(255, 255, 255, 0.05);
+    background: linear-gradient(145deg, rgba(15, 23, 42, 0.8), rgba(30, 41, 59, 0.6));
     border-radius: 20px;
     padding: 30px;
     width: 280px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 2px solid transparent;
+    border: 2px solid rgba(0, 245, 255, 0.2);
+    backdrop-filter: blur(10px);
 }
 
 .developer-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(13, 168, 189, 0.3);
-    border-color: #0da8bd;
+    box-shadow: 0 15px 40px rgba(0, 245, 255, 0.4),
+                0 0 30px rgba(139, 92, 246, 0.3);
+    border-color: #00f5ff;
+    background: linear-gradient(145deg, rgba(15, 23, 42, 0.9), rgba(30, 41, 59, 0.8));
 }
 
 .dev-image-wrapper {
@@ -797,8 +801,16 @@ nav ul li.has-submenu > a::after {
     margin: 0 auto 20px;
     border-radius: 50%;
     overflow: hidden;
-    border: 4px solid #0f488a;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border: 4px solid #8b5cf6;
+    box-shadow: 0 5px 20px rgba(139, 92, 246, 0.5),
+                inset 0 0 20px rgba(0, 245, 255, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+.developer-card:hover .dev-image-wrapper {
+    border-color: #00f5ff;
+    box-shadow: 0 5px 25px rgba(0, 245, 255, 0.6),
+                inset 0 0 20px rgba(139, 92, 246, 0.2);
 }
 
 .dev-image-wrapper img {
@@ -811,12 +823,14 @@ nav ul li.has-submenu > a::after {
     font-size: 1.8em;
     margin: 15px 0 5px;
     color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
 .dev-info p {
     font-size: 1.2em;
-    color: #0da8bd;
+    color: #00f5ff;
     margin: 0;
+    font-weight: 500;
 }
 
 /* Responsive */
@@ -824,14 +838,48 @@ nav ul li.has-submenu > a::after {
     #desarrolladores .container h2 {
         font-size: 3em;
     }
-
+    
     .team-container {
         gap: 30px;
     }
-
+    
     .developer-card {
         width: 90%;
         max-width: 300px;
+    }
+}
+/* Introducción del Equipo */
+.team-intro {
+    margin-bottom: 60px;
+    padding: 0 20px;
+}
+
+.team-intro h2 {
+    font-size: 4em;
+    margin-bottom: 20px;
+    color: #00f5ff;
+    text-shadow: 0 0 20px rgba(0, 245, 255, 0.5);
+    font-weight: 700;
+}
+
+.team-intro .subtitle-dev {
+    font-size: 1.5em;
+    color: #a8b2d1;
+    margin: 0 auto;
+    max-width: 800px;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+/* Responsive para introducción */
+@media (max-width: 800px) {
+    .team-intro h2 {
+        font-size: 3em;
+    }
+    
+    .team-intro .subtitle-dev {
+        font-size: 1.2em;
+        padding: 0 10px;
     }
 }
 
